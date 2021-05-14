@@ -1,0 +1,75 @@
+@import '../../styles.scss';
+
+
+.home{
+    margin-top: 7em;
+    @media (min-width: $tablet){
+        margin-top: 10%;
+      
+       }
+}
+
+.post-card{
+    width: 90%;
+    max-width: 1000px;
+    text-align: center;
+    margin: 2em auto;
+
+    .image{
+        max-width: 600px;
+        max-height: 400px;
+        object-fit: cover;
+        @media (min-width: $tablet){
+            max-width: 800px;
+             max-height: 600px;
+            }
+    } 
+
+    .header{
+        display: flex;
+        justify-content: center;
+        margin: 4em 1em;
+        text-transform: uppercase;
+       
+        #title{
+            @include headerStyle();
+        }
+    }
+
+    p{
+        margin: 1em auto;
+        text-align:justify;
+        @include paragraph();
+        @media (min-width: $tablet){
+           width: 80%;
+           text-align:left;
+           }
+    }
+
+    .buttons{
+        text-align: center;
+        margin: 2em;
+     
+        & > button{
+            margin: 0 1em;
+            border-radius: 50%;
+        }
+    }
+
+   
+}
+#search{
+    width: 80%;
+    margin: 0 auto;
+    margin-top: -2em;
+
+    @media (min-width: $tablet){
+        width: 30%;
+        margin-top: 7em;
+        }
+
+    @media (min-width: $laptop){
+        width: 30%;
+        margin-top: 2em;
+         }
+}

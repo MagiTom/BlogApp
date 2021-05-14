@@ -1,0 +1,42 @@
+
+<nav class="navbar navbar-expand-md navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" routerLink="">My<span>Blog</span></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+      aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup" #nav>
+      <div class="navbar-nav">
+
+        <button (click)="closeNav(nav)" routerLink="" mat-icon-button color="primary"
+          aria-label="Example icon button with a home icon">
+          <span class="material-icons">
+            home
+          </span>
+        </button>
+
+        <button (click)="openSearch(nav)" routerLink="" mat-icon-button color="Basic"
+          aria-label="Example icon button with a home icon">
+          <span class="material-icons">
+            search
+          </span>
+        </button>
+
+        <button (click)="closeNav(nav)" routerLink="add" mat-icon-button color="accent"
+          aria-label="Example icon button with a home icon">
+          <span class="material-icons">
+            add_circle
+          </span>
+        </button>
+
+      </div>
+    </div>
+  </div>
+</nav>
+
+<div class="app">
+<router-outlet></router-outlet>
+</div>
+
+<div class="p-3 mb-2 bg-secondary text-white text-center">Made by Magdalena Tomala</div>

@@ -1,0 +1,25 @@
+
+<div class="edit">
+  <h3>Edit</h3>
+
+  <div class="image">
+    <img [src]="postData.img" width="200px" height="100px">
+    <button (click)="fetchPhoto()" mat-fab color="basic" aria-label="Example icon button with a bookmark icon"><span class="material-icons">
+      shuffle
+      </span></button>
+  </div>
+
+  <div class="form-group">
+    <input type="text" [(ngModel)]="postData.title" class="form-control" placeholder="Title">
+  </div>
+
+  <div class="form-group">
+    <textarea type="text" [(ngModel)]="postData.text" class="form-control" placeholder="Text" id="text" autocomplete="off"></textarea>
+  </div>
+
+  <div class="form-group">
+    <button (click)="editPost()" mat-fab color="primary" aria-label="Example icon button with a bookmark icon"><span class="material-icons">
+      edit
+      </span></button>
+  </div>
+</div>

@@ -1,0 +1,42 @@
+/* You can add global styles to this file, and also import other style files */
+@import '~bootstrap/dist/css/bootstrap.min.css';
+
+$tablet: 768px;
+$laptop: 1200px;
+$monitor: 1400px;
+
+$fontColor: rgb(141, 141, 141);
+$fontColor2: rgb(110, 99, 99);
+
+@mixin headerStyle() {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: $fontColor;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+
+    @media (min-width: $tablet){
+      font-size: 2rem;
+      }
+  }
+
+  @mixin paragraph() {
+    font-size: 1rem;
+    line-height: 1em;
+    letter-spacing: 1px;
+    color: $fontColor;
+    @media (min-width: $tablet){
+      font-size: 1.1rem;
+      line-height: 1.5rem;
+      text-align:left;
+      }
+  }
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+*, *::before, *::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}

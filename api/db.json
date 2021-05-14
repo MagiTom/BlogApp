@@ -1,0 +1,16 @@
+{
+  "posts": [
+    {
+      "title": "Flowers",
+      "text": "Cras rhoncus erat ultricies, tempor diam nec, tincidunt velit. Duis sollicitudin neque id ultrices ornare. Proin ut pretium justo. Donec vel metus suscipit, molestie dui vitae, rhoncus tortor. Nullam et ante ac quam sagittis porttitor. Donec ut sodales diam, non dictum ante. Phasellus dignissim ultricies enim ac semper. Siema",
+      "img": "https://images.unsplash.com/photo-1620325481201-82a5c094d389?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwyMjA4NTJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2MjA4MzU1Nzk&ixlib=rb-1.2.1&q=80&w=1080",
+      "id": 4
+    },
+    {
+      "title": "About Snow",
+      "text": "Donec et dui dolor. Vivamus mollis ipsum vel auctor mollis. Maecenas convallis magna metus, at porta nulla accumsan sit amet. Nulla vehicula pretium blandit. Ut nec felis urna. Phasellus convallis mattis hendrerit. Suspendisse tincidunt ante vitae tortor vehicula, id commodo urna luctus. Mauris rhoncus commodo risus, ut maximus diam malesuada eu. Praesent maximus nibh at velit placerat dapibus.",
+      "img": "https://images.unsplash.com/photo-1619458610911-c88c91224e77?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwyMjA4NTJ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2MjEwMjA1MDk&ixlib=rb-1.2.1&q=80&w=1080",
+      "id": 5
+    }
+  ]
+}

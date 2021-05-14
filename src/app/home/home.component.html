@@ -1,0 +1,24 @@
+<div class="home">
+  <div [style.visibility]="searchService.getSearchStatus()? 'visible' : 'hidden'" class="form-group">
+  <input type="text" [(ngModel)]="searchText" class="form-control" id="search" placeholder="Search...">
+</div>
+<mat-card *ngFor="let post of blogs[0] | filter:searchText; index as i" class="post-card">
+    <mat-card-header class="header">
+      <mat-card-title [innerHTML]="post.title | highlight:searchText" id="title"></mat-card-title>
+    </mat-card-header>
+    <img class="image" mat-card-image [src]="post.img">
+    <mat-card-content>
+      <p [innerHTML]="post.text | highlight:searchText">
+      </p>
+    </mat-card-content>
+    <mat-card-actions class="buttons">
+      <button [routerLink]="['/edit', post.id]"  mat-fab color="primary"><span class="material-icons">
+        edit
+        </span></button>
+      <button (click)="deletePost(post.id)"  mat-fab color="accent"><span class="material-icons">
+        delete
+        </span></button>
+    </mat-card-actions>
+  </mat-card>
+
+</div>
