@@ -1,0 +1,21 @@
+.form-group{
+    margin: 2em;
+}
+
+input.ng-invalid.ng-touched,
+textarea.ng-invalid.ng-touched {
+  border: 1px solid red;
+}
+
+#text{
+    min-height: 9em;
+}
+
+button{
+    margin: 1em;
+    border-radius: 50%;
+}
+
+.alert{
+    color: red;
+}

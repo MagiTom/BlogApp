@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { PhotosService } from '../photos.service';
 import { PostsService } from '../posts.service';
+import { Post } from '../shared/post';
 
 @Component({
   selector: 'app-edit-blog',
@@ -21,9 +21,9 @@ export class EditBlogComponent implements OnInit {
   })
 }
   
-  editPost(){
+  editPost(postInfo:Post){
     if(window.confirm('Are you sure, you want to update?')){
-      this.postService.updateBlog(this.id, this.postData).subscribe(data => {
+      this.postService.updateBlog(this.id, postInfo).subscribe(data => {
         this.router.navigate([''])
       })
     }

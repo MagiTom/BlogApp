@@ -1,6 +1,8 @@
 import { Component, OnInit} from '@angular/core';
 import { PostsService } from '../posts.service';
 import { SearchService } from '../shared/search.service';
+import { Router, NavigationEnd} from '@angular/router';
+
 
 @Component({
   selector: 'app-home',
@@ -8,13 +10,13 @@ import { SearchService } from '../shared/search.service';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-  photoUrl: string;
-  searchText;
+  photoUrl:string;
+  searchText:string;
   
-  constructor(public postService:PostsService, public searchService:SearchService) { }
+  constructor(public postService:PostsService, public searchService:SearchService, private router: Router) { }
 
   blogs = [];
-  data;
+  data:{};
   search:boolean;
 
   ngOnInit(): void {
@@ -35,6 +37,11 @@ export class HomeComponent implements OnInit {
       this.postService.deleteBlog(id).subscribe(data => {
         this.loadPosts();
         window.location.reload();
+        this.router.events.subscribe((event) => {
+          if (event instanceof NavigationEnd){
+             window.scrollTo(0,0);
+          }
+       });
       })
     }
   }

@@ -23,9 +23,9 @@ export class AddBlogComponent implements OnInit {
     this.fetchPhoto();
   }
 
-  addPost(){
+  addPost(posts){
     
-    this.postsService.addBlog(this.postsDetails).subscribe((data: {})=>{
+    this.postsService.addBlog(posts).subscribe((data: {})=>{
       this.router.navigate([''])
     });
 
