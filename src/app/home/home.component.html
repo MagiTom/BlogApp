@@ -2,13 +2,16 @@
   <div [style.visibility]="searchService.getSearchStatus()? 'visible' : 'hidden'" class="form-group">
   <input type="text" [(ngModel)]="searchText" class="form-control" id="search" placeholder="Search...">
 </div>
+
+
+
 <mat-card *ngFor="let post of blogs[0] | filter:searchText; index as i" class="post-card">
-    <mat-card-header class="header">
-      <mat-card-title [innerHTML]="post.title | highlight:searchText" id="title"></mat-card-title>
+    <mat-card-header>
+      <mat-card-content class="title"><p [innerHTML]="post.title | highlight:searchText"></p></mat-card-content>
     </mat-card-header>
     <img class="image" mat-card-image [src]="post.img">
     <mat-card-content>
-      <p [innerHTML]="post.text | highlight:searchText">
+      <p [innerHTML]="post.text | highlight:searchText" class="text">
       </p>
     </mat-card-content>
     <mat-card-actions class="buttons">

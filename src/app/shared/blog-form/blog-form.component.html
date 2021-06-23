@@ -1,0 +1,32 @@
+
+<form>
+
+  <div class="form-group">
+    <input type="text" [(ngModel)]="modelTitle" [ngModelOptions]="{standalone: true}" class="form-control" placeholder="Title" required minlength="3" #title="ngModel">
+  </div>
+  <ng-container *ngIf="title.invalid && title.touched">
+    <div class="alert">
+      You must enter at least 3 characters!
+    </div>
+  </ng-container>
+
+  <div class="form-group">
+    <textarea type="text" [(ngModel)]="modelText" [ngModelOptions]="{standalone: true}" class="form-control" placeholder="Text" id="text"
+      autocomplete="off" required minlength="3" #text="ngModel"></textarea>
+  </div>
+
+  <ng-container *ngIf="text.invalid && text.touched">
+    <div class="alert">
+      You must enter at least 3 characters!
+    </div>
+  </ng-container>
+
+  <div class="form-group">
+    <button (click)="cancel()" mat-fab color="basic"><span
+      class="material-icons">close</span></button>
+    <button [disabled]="title.invalid || text.invalid" (click)="postEvent()" mat-fab [color]="color"><span
+        class="material-icons">
+        <ng-content></ng-content>
+      </span></button>
+  </div>
+</form>

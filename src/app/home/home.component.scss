@@ -25,18 +25,22 @@
             }
     } 
 
-    .header{
+    .mat-card-header{
         display: flex;
+        height: auto;
         justify-content: center;
-        margin: 4em 1em;
+        margin: 4em 2em;
         text-transform: uppercase;
-       
-        #title{
-            @include headerStyle();
-        }
     }
 
-    p{
+
+    .title{
+        @include headerStyle();
+        word-wrap: break-word;
+        min-width: 100%;
+    }
+
+    .text{
         margin: 1em auto;
         text-align:justify;
         @include paragraph();
@@ -73,3 +77,4 @@
         margin-top: 2em;
          }
 }
+

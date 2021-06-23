@@ -18,6 +18,7 @@ import { EditBlogComponent } from './edit-blog/edit-blog.component';
 import {MatDividerModule} from '@angular/material/divider';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import { HighlightSearch } from './home/highlight.pipe';
+import { BlogFormComponent } from './shared/blog-form/blog-form.component';
 
 
 @NgModule({
@@ -26,7 +27,8 @@ import { HighlightSearch } from './home/highlight.pipe';
     HomeComponent,
     AddBlogComponent,
     EditBlogComponent,
-    HighlightSearch
+    HighlightSearch,
+    BlogFormComponent
   ],
   imports: [
     BrowserModule,
