@@ -9,6 +9,10 @@ magnifier, which, when clicked on, will let you filter yours posts.
 
 This project have a json server back-end so it can't be deploy. If you want check it's funcionality you have to clone this repository to your computer. 
 
+# Demo
+
+<img src="/src/assets/blog.gif" />
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
