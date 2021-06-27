@@ -1,6 +1,13 @@
 # BlogApp
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.12.
+Angular blog app where you can add, remove and update posts. In each of the posts you can add a
+random picture, write a title and add content. You can’t add an empty post or a post without a title. All of
+the posts are saved in a json-server, so you won’t lose your data. In the nav there is an icon with
+magnifier, which, when clicked on, will let you filter yours posts.
+
+# Instalation
+
+This project have a json server back-end so it can't be deploy. If you want check it's funcionality you have to clone this repository to your computer. 
 
 ## Development server
 
